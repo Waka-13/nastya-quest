@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квест: Рівень 1</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('images/photo1.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        /* Стиль кнопки для цього рівня */
+        .container button {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div id="passwordPrompt" class="password-prompt hidden">
+        <h2>Введіть пароль для доступу до рівня</h2>
+        <input type="text" id="levelPasswordInput" placeholder="Пароль">
+        <button id="checkPasswordBtn">Увійти</button>
+        <p id="passwordFeedback"></p>
+    </div>
+
+    <div id="questContent" class="container hidden">
+        <h1>З Днем народження Настюшка!</h1>
+        <p>Там де каву разом пили?</p>
+        <input type="text" id="answerInput" placeholder="Введіть вашу відповідь">
+        <button>Перевірити</button> <p id="feedback" class="hidden"></p>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const correctAnswer = "polna";
+        const levelMessage = "Чудово! Підказка у відповіді. Знайдіть наступний QR-код!"; 
+        // nextLevelPage не потрібен для автоматичного переходу, але залишаю його для фінального рівня
+        // де його відсутність сигналізує про завершення квесту.
+        const nextLevelPage = "level2.html"; 
+    </script>
+</body>
+</html>

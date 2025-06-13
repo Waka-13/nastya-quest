@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квест: Рівень 2</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('images/photo2.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .container button {
+            background-color: deepskyblue; /* блакитний */
+        }
+    </style>
+</head>
+<body>
+    <div id="passwordPrompt" class="password-prompt hidden">
+        <h2>Введіть пароль для доступу до рівня</h2>
+        <input type="text" id="levelPasswordInput" placeholder="Пароль">
+        <button id="checkPasswordBtn">Увійти</button>
+        <p id="passwordFeedback"></p>
+    </div>
+
+    <div id="questContent" class="container hidden">
+        <h1>З Днем народження Настюшка!</h1>
+        <p>Які слова в кінці після кави з корицею?</p>
+        <input type="text" id="answerInput" placeholder="Введіть вашу відповідь">
+        <button>Перевірити</button>
+        <p id="feedback" class="hidden"></p>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const correctAnswer = "амінь";
+        const levelMessage = "Вірно! Твій улюблений секонд (надіюся добре пам'ятаю :)). Знайдіть наступний QR-код!";
+        const nextLevelPage = "level3.html";
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квест: Рівень 3</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('images/photo3.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .container button {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="passwordPrompt" class="password-prompt hidden">
+        <h2>Введіть пароль для доступу до рівня</h2>
+        <input type="text" id="levelPasswordInput" placeholder="Пароль">
+        <button id="checkPasswordBtn">Увійти</button>
+        <p id="passwordFeedback"></p>
+    </div>
+
+    <div id="questContent" class="container hidden">
+        <h1>З Днем народження Настюшка!</h1>
+        <p>З чого в тебе є сертифікат, який пов'язаний з цим місцем?</p>
+        <input type="text" id="answerInput" placeholder="Введіть вашу відповідь">
+        <button>Перевірити</button>
+        <p id="feedback" class="hidden"></p>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const correctAnswer = "rogal świętomarcinski";
+        const levelMessage = "Саме так! Там де ти відчула \"оргазм\" зі мною 😉. Знайдіть наступний QR-код!";
+        const nextLevelPage = "level4.html"; // Посилання на наступний рівень для відображення в QR-коді
+    </script>
+</body>
+</html>

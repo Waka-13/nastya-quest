@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квест: Рівень 5</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('images/photo5.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .container button {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="passwordPrompt" class="password-prompt hidden">
+        <h2>Введіть пароль для доступу до рівня</h2>
+        <input type="text" id="levelPasswordInput" placeholder="Пароль">
+        <button id="checkPasswordBtn">Увійти</button>
+        <p id="passwordFeedback"></p>
+    </div>
+
+    <div id="questContent" class="container hidden">
+        <h1>З Днем народження Настюшка!</h1>
+        <p>Якщо ти була б найбільшим расистом, ксенофобом і евреє ненавистнецею. Хто ти?</p>
+        <input type="text" id="answerInput" placeholder="Введіть вашу відповідь">
+        <button>Перевірити</button>
+        <p id="feedback" class="hidden"></p>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const correctAnswer = "гітлер";
+        const levelMessage = "Правильно! А де він мав був в Познані? Знайдіть наступний QR-код!";
+        const nextLevelPage = "level6.html";
+    </script>
+</body>
+</html>
