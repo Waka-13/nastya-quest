@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доступ до квесту</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .access-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+        .access-container h1 {
+            color: #0056b3;
+            margin-bottom: 25px;
+        }
+        .access-container input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 18px;
+            text-align: center;
+        }
+        .access-container button {
+            background-color: #007bff; /* Стандартний синій колір */
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        .access-container button:hover {
+            background-color: #0056b3;
+        }
+        #accessFeedback {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="access-container">
+        <h1>Введіть код доступу</h1>
+        <input type="text" id="accessCodeInput" placeholder="Ваш секретний код">
+        <button onclick="checkAccessCode()">Увійти</button>
+        <p id="accessFeedback"></p>
+    </div>
+
+    <script>
+        const correctAccessCode = "1506"; // Твій пароль
+        const firstQuestPage = "level6.html"; // Перша сторінка квесту
+
+        function checkAccessCode() {
+            const userInput = document.getElementById('accessCodeInput').value.trim();
+            const feedbackElement = document.getElementById('accessFeedback');
+
+            if (userInput === correctAccessCode) {
+                feedbackElement.textContent = "Код вірний! Перенаправляємо...";
+                feedbackElement.style.color = "#28a745";
+                setTimeout(() => {
+                    window.location.href = firstQuestPage;
+                }, 1500);
+            } else {
+                feedbackElement.textContent = "Невірний код. Спробуйте ще раз.";
+                feedbackElement.style.color = "#dc3545";
+            }
+        }
+
+        document.getElementById('accessCodeInput').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                checkAccessCode();
+            }
+        });
+    </script>
+</body>
+</html>
