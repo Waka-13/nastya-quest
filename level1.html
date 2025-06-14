@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Квест: Рівень 1</title>
     <link rel="stylesheet" href="style.css">
-    <style>
+    
+</head>
+<body>
+    <div id="passwordPrompt" class="password-prompt hidden">
+        <h2>Введіть пароль для доступу до рівня</h2>
+        <input type="text" id="levelPasswordInput" placeholder="Пароль">
+        <button id="checkPasswordBtn">Увійти</button>
+        <p id="passwordFeedback"></p>
+    </div>
+<style>
         body {
             background-image: url('image/photo1.jpg');
             background-size: cover;
@@ -18,15 +27,6 @@
             background-color: orange;
         }
     </style>
-</head>
-<body>
-    <div id="passwordPrompt" class="password-prompt hidden">
-        <h2>Введіть пароль для доступу до рівня</h2>
-        <input type="text" id="levelPasswordInput" placeholder="Пароль">
-        <button id="checkPasswordBtn">Увійти</button>
-        <p id="passwordFeedback"></p>
-    </div>
-
     <div id="questContent" class="container hidden">
         <h1>З Днем народження Настюшка!</h1>
         <p>Там де каву разом пили?</p>
