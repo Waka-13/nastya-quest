@@ -8,10 +8,10 @@
     <style>
         body {
             background-image: url('image/photo7.jpg');
-            background-size: cover;
-            background-position: center center;
-            background-repeat: repeat;
-            background-attachment: fixed;
+            background-repeat: repeat; /* Це дозволить зображенню повторюватися */
+            background-size: 150px 150px; /* Зображення буде відображатися у своєму оригінальному розмірі. Або задайте 200px 200px, якщо хочете контролювати розмір тайлу. */
+            background-position: left top; /* Починаємо повторення з верхнього лівого кута */
+            background-attachment: fixed; 
         }
         .container button {
             background-color: gray;
